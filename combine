@@ -1,0 +1,27 @@
+#!/bin/bash
+# Thien Trinh
+# Homework 2
+# Problem 3
+# 04/17/2019
+
+if [ "$#" -lt 2 ]; then 
+  (>&2 echo "Error: one or lesser argument")
+  exit 1
+
+elif [ -e "$1" ]; then
+  (>&2 echo "Error: first file exits")
+  exit 1
+fi
+
+err="$1"
+while [ "$#" -gt 1 ]; do
+  shift
+  if [ ! -e "$1" ]; then
+    echo "Error: $1 does not exit" >> "$err"
+  elif [ -d "$1" ]; then
+    echo "Error: $1 is a directory" >> "$err"
+  else 
+    cat "$1"
+  fi
+done
+exit 0

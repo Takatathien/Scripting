@@ -1,0 +1,7 @@
+#!/bin/bash
+#Thien Trinh
+#Homework 2
+#Problem 2
+#04/17/2019
+
+alias private='chmod -R g=u,o-w'

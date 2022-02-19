@@ -1,0 +1,33 @@
+Thien Trinh
+Homwork 2
+Problem 1
+04/17/2019
+
+For echo command, I simply used
+
+$echo GoHuskies
+GoHuskies
+
+For cat command, I created a file called GoHuskies and put a string "GoHuskies" in it, then called cat on it:
+
+$echo GoHuskies > GoHuskies
+$cat GoHuskies
+GoHuskies
+
+For ls command, I simply called ls on the file GoHuskies:
+
+$ls GoHuskies
+GoHuskies
+
+For grep command, I simply made it search for "GoHuskies" inside the GoHuskies file.
+
+$grep -h GoHuskies GoHuskies
+
+For !!, due to the nature of the commmand to print out the previous command first before printing the output,
+I first need to create an alias for the GoHuskies word, and made it do nothing.
+Then called GoHuskies, then !!
+
+$alias GoHuskies=''
+$GoHuskies
+$!!
+GoHuskies

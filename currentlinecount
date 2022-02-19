@@ -1,0 +1,18 @@
+#!/bin/bash
+#Thien Trinh
+#Homework 2
+#Problem 4
+#04/17/2019
+
+if [ "$#" -lt 2 ]; then
+  echo "$0: error: fewer than two arguments"
+  exit 1
+fi
+
+out="$1"
+date >> "$out"
+
+shift
+wc -l "$@" >> "$out"
+exit 0
+
